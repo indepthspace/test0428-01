@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스를 중앙으로 보내는 방법 3가지 </title>
+  <style>
+  *{margin: 0; padding: 0;} 
+  .d1, .d2, .d3, .d4
+  {width: 800px; height: 300px; background-color: yellow; border: 5px solid #000;}
+  
+  .d1 > div{width: 100px; height: 100px; background-color: red; margin: 0 auto;}
+
+  .d2{position: relative;}
+  .d2 > div{width: 100px; height: 100px; background-color: red; position: absolute;
+     top: 50%; left: 50%; margin-left: -50px; margin-top: -50px;}
+
+  .d3{position: relative;}
+  .d3 > div{background-color: red; font-size: 50px; position: absolute;
+     top: 50%; left: 50%; translate: (-50%,-50%);}
+  /*.d3 > div 사이트가 유동적이다.
+  transform: translate(-50%,-50%); 자기 몸의 반만큼
+  */
+  .d4{position: relative;}
+  .d4 > div{font-size: 50px; background-color: red; position: absolute; width: 100%;}
+   /*position: absolute; 시키면 width: 100%를 생략하면 안됨 */
+  </style>
+</head>
+<body>
+  <div class="d1">
+    <div></div>
+  </div>
+  <div class="d2">
+    <div></div>
+  </div>
+  <div class="d3">
+    <div>테스트문구입니다.ㅌㅌㅌㅌㅌㅌ</div>
+  </div>
+  <div class="d4">
+    <div>여기는 d4 영역입니다.</div>
+  </div>
+
+</body>
+</html>
